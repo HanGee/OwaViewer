@@ -3,6 +3,15 @@ OwaViewer
 
 OwaViewer is an utility to simulate environment for running OwaNEXT application.
 
+Usage
+-
+
+You can use OwaViewer to open specific QML file to run directly: 
+
+```
+OwaViewer /home/user/yourproject/App.qml
+```
+
 Build Application
 -
 
