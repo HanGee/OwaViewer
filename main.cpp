@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 
 	if (argc < 2) {
 		printf("Usage: OwaViewer [directory]\n");
+		printf("   or: OwaViewer [File]\n");
 		return 1;
 	}
 
@@ -27,12 +28,21 @@ int main(int argc, char *argv[])
 
 			qmlPath = dirPath.filePath("App.qml");
 			if (!QFile(qmlPath).exists()) {
-				printf("OwaNEXT Application doesn't exist.\n");
+				printf("Cannot find application in the directory.\n");
 				return 1;
 			}
 		}
+	} else {
+
+		// Whether does the QML file exists or not?
+		qmlPath = dirPath.path();
+		if (!QFile(qmlPath).exists()) {
+			printf("OwaNEXT Application doesn't exist.\n");
+			return 1;
+		}
 	}
 
+	// Run it
 	engine.load(QUrl(qmlPath));
 
 	return app.exec();
