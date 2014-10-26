@@ -31,6 +31,11 @@ For Mac OSX:
 macdeployqt OwaViewer.app -dmg
 ```
 
+For Windows:
+```
+windeployqt .
+```
+
 License
 -
 MIT
