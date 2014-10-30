@@ -26,12 +26,20 @@ Deployment
 
 Packing OwaViewer is possible to do for different platform after building application.
 
-For Mac OSX:
+Before packing, you should compile OwaViewer as release version:
 ```
-macdeployqt OwaViewer.app -dmg
+$ qmake CONFIG+=release
+$ make
 ```
 
-For Windows:
+Then you can start packing for the specific platform what you want:
+
+Packing for Mac OSX:
+```
+macdeployqt OwaViewer.app -dmg -always-overwrite -qmldir=./tests
+```
+
+Packing for Windows:
 ```
 windeployqt .
 ```
