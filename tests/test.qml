@@ -2,6 +2,9 @@ import QtQuick 2.3
 import QtQuick.Controls 1.0
 import QtGraphicalEffects 1.0
 import QtMultimedia 5.0
+import Qt.labs.folderlistmodel 2.1
+import QtWebKit 3.0
+import QtQuick.LocalStorage 2.0
 
 ApplicationWindow {
 	visible: true;
