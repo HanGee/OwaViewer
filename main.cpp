@@ -1,3 +1,4 @@
+#include <QObject>
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QDir>
@@ -10,7 +11,7 @@ int main(int argc, char *argv[])
 
 	app.setApplicationName("OwaViewer");
 	app.setOrganizationName("HanGee OwaNEXT");
-	app.setOrganizationDOmain("han-gee.com");
+	app.setOrganizationDomain("han-gee.com");
 
 #if defined(Q_OS_MACX)
 	QCoreApplication::addLibraryPath(QCoreApplication::applicationDirPath() + "/../PlugIns");
@@ -56,6 +57,8 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
+
+	QObject::connect(&engine, SIGNAL(quit()), QCoreApplication::instance(), SLOT(quit()));
 
 	// Run it
 	engine.load(QUrl(qmlPath));
