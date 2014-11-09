@@ -8,6 +8,10 @@ int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
 
+	app.setApplicationName("OwaViewer");
+	app.setOrganizationName("HanGee OwaNEXT");
+	app.setOrganizationDOmain("han-gee.com");
+
 #if defined(Q_OS_MACX)
 	QCoreApplication::addLibraryPath(QCoreApplication::applicationDirPath() + "/../PlugIns");
 #endif
