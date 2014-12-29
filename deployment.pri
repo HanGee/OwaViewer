@@ -24,4 +24,8 @@ android-no-sdk {
     INSTALLS += target
 }
 
+mac {
+    ICON = OwaViewer.icns
+}
+
 export(INSTALLS)

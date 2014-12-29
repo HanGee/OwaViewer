@@ -36,6 +36,7 @@ Then you can start packing for the specific platform what you want:
 
 Packing for Mac OSX:
 ```
+sh mkmacicns.sh
 macdeployqt OwaViewer.app -always-overwrite -qmldir=./tests
 pkgbuild --identifier com.hangee.owaviewer --root ./OwaViewer.app/ --scripts ./scripts/mac --install-location /Applications/OwaViewer.app OwaViewer.pkg
 ```
