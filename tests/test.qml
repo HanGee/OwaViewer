@@ -9,6 +9,7 @@ import QtWebKit 3.0
 import QtQml.Models 2.1
 import Qt.labs.settings 1.0
 import QtWebEngine 1.0
+import QtWebView 1.0
 
 ApplicationWindow {
 	visible: true;
