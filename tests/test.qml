@@ -6,11 +6,12 @@ import QtQuick.Layouts 1.1
 import QtQuick.Particles 2.0
 import QtQuick.LocalStorage 2.0
 import QtQuick.XmlListModel 2.0
+import Qt.WebSockets 1.0
+import Qt.labs.folderlistmodel 2.1
+import Qt.labs.settings 1.0
+import QtQml.Models 2.1
 import QtGraphicalEffects 1.0
 import QtMultimedia 5.4
-import Qt.labs.folderlistmodel 2.1
-import QtQml.Models 2.1
-import Qt.labs.settings 1.0
 import QtWebEngine 1.0
 import QtWebView 1.0
 import QtAudioEngine 1.0
