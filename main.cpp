@@ -4,6 +4,7 @@
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
+#include <QtWebEngine>
 
 int main(int argc, char *argv[])
 {
@@ -59,6 +60,9 @@ int main(int argc, char *argv[])
 	}
 
 	QObject::connect(&engine, SIGNAL(quit()), QCoreApplication::instance(), SLOT(quit()));
+
+	// Initializing WebEngine
+	QtWebEngine::initialize(); 
 
 	// Run it
 	engine.load(QUrl(qmlPath));
