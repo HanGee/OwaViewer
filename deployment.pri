@@ -25,6 +25,7 @@ android-no-sdk {
 }
 
 mac {
+	QMAKE_MAC_SDK = macosx10.11
     ICON = OwaViewer.icns
 }
 
