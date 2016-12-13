@@ -5,6 +5,7 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QtWebEngine>
+#include <QFileDialog>
 
 int main(int argc, char *argv[])
 {
@@ -19,17 +20,14 @@ int main(int argc, char *argv[])
 #endif
 
 	QQmlApplicationEngine engine;
+	QString qmlPath;
 
 	if (argc < 2) {
 		printf("Usage: OwaViewer [directory]\n");
 		printf("   or: OwaViewer [File]\n");
 		printf("   or: OwaViewer --demo\n");
-		return 1;
-	}
-
-	QString qmlPath;
-
-	if (QString(argv[1]) == "--demo") {
+		qmlPath = QString("qrc:/OwaViewer.qml");
+	} else if (QString(argv[1]) == "--demo") {
 		qmlPath = QString("qrc:/tests/test.qml");
 	} else {
 

@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+       <file>OwaViewer.qml</file>
        <file>tests/test.qml</file>
     </qresource>
 </RCC>

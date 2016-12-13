@@ -25,7 +25,9 @@ android-no-sdk {
 }
 
 mac {
-	QMAKE_MAC_SDK = macosx10.11
+	QMAKE_RPATHDIR = @executable_path/../Frameworks
+	CONFIG+=relative_qt_rpath
+	QMAKE_MAC_SDK = macosx10.12
     ICON = OwaViewer.icns
 }
 

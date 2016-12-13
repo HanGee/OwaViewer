@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
 BINPATH=/usr/bin/OwaViewer
-
+TMPPATH=/tmp/OwaViewer.tmp
+exit
 echo "Creating script"
-echo "#!/usr/bin/env bash" > $BINPATH
-echo "/Applications/OwaViewer.app/Contents/MacOS/OwaViewer \$@" >> $BINPATH
+echo "#!/usr/bin/env bash" > $TMPPATH
+echo "/Applications/OwaViewer.app/Contents/MacOS/OwaViewer \$@" >> $TMPPATH
 
-chmod +x $BINPATH
+sudo mv $TMPPATH $BINPATH
+
+sudo chmod +x $BINPATH
 
 
 #sudo ln -sf /Applications/OwaViewer.app/Contents/MacOS/OwaViewer /usr/bin/OwaViewer

@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += qml quick multimedia widgets webengine webview
+QT += qml quick multimedia widgets webengine webview websockets
 
 CONFIG += static
 
