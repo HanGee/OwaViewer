@@ -1,7 +1,7 @@
 OwaViewer
 =========
 
-OwaViewer is an utility to simulate environment for running OwaNEXT application. It aims to make developer to run QML file and OwaNEXT application without actually installing Qt SDK.
+OwaViewer is an utility like qmlscene to simulate environment for running OwaNEXT application. It aims to make developer to run QML file and OwaNEXT application without actually installing Qt SDK.
 
 Usage
 -
@@ -34,14 +34,15 @@ $ make
 
 Then you can start packing for the specific platform what you want:
 
-Packing for Mac OSX:
+### Packing for Mac OSX:
 ```
 sh mkmacicns.sh
 macdeployqt OwaViewer.app -always-overwrite -qmldir=./tests -executable=OwaViewer.app/Contents/MacOS/OwaViewer
 pkgbuild --identifier com.hangee.owaviewer --root ./OwaViewer.app/ --scripts ./scripts/mac --install-location /Applications/OwaViewer.app OwaViewer.pkg
 ```
+_Note: There is a critial bug on Qt 5.7.1+ cause macdeployqt doesn't work. Try to run it without `-always-overwrite` options to avoid this problem._
 
-Packing for Windows:
+### Packing for Windows:
 ```
 windeployqt .
 ```
