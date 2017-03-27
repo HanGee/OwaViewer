@@ -70,7 +70,7 @@ $ sh mkmacicns.sh
 $ macdeployqt OwaViewer.app -always-overwrite -qmldir=./tests -executable=OwaViewer.app/Contents/MacOS/OwaViewer
 $ pkgbuild --identifier com.hangee.owaviewer --root ./OwaViewer.app/ --scripts ./scripts/mac --install-location /Applications/OwaViewer.app OwaViewer.pkg
 ```
-_Note: There is a critial bug on Qt 5.7.1+ cause macdeployqt doesn't work. Try to run it without `-always-overwrite` options to avoid this problem._
+_Note: There is a critical bug on Qt 5.7.1+ cause macdeployqt doesn't work. Try to run it without `-always-overwrite` options to avoid this problem._
 
 ### Packing for Windows:
 ```shell
