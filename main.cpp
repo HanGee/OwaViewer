@@ -59,11 +59,13 @@ int main(int argc, char *argv[])
 
 	QObject::connect(&engine, SIGNAL(quit()), QCoreApplication::instance(), SLOT(quit()));
 
-	// Initializing WebEngine
+	// Initializing WebEngine and WebView
 	QtWebEngine::initialize(); 
 
 	// Run it
 	engine.load(QUrl(qmlPath));
+	if (engine.rootObjects().isEmpty())
+		return -1;
 
 	return app.exec();
 }

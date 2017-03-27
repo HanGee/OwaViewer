@@ -14,6 +14,7 @@ import QtQml.Models 2.1
 import QtGraphicalEffects 1.0
 import QtMultimedia 5.6
 import QtWebView 1.1
+import QtWebEngine 1.2
 import QtAudioEngine 1.0
 import QtBluetooth 5.2
 import QtQuick.Extras 1.4
